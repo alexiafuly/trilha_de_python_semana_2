@@ -21,3 +21,13 @@ atk2 = int(input("Digite um valor para o ataque do segundo monstro: "))
 if atk2 <= 0:
   raise ValueError("Ops, parece que você digitou um valor inválido! Digite um número maior que 0.")
 
+# Adicionando a função ataque
+
+def atacar(nome_atacante,ataque,nome_defensor,hp_defensor):
+  hp_defensor = hp_defensor - ataque
+  print(f"{nome_atacante} usou ataque rápido! {nome_defensor} sofreu {ataque} de dano!")
+  return hp_defensor, ataque
+  
+def exibir_placar(nome1,hp1,nome2,hp2):
+  print(f"{nome1}: {hp1} hp. {nome2}: {hp2} hp.")
+  
