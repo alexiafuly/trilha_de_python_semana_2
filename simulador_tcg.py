@@ -36,16 +36,14 @@ def exibir_placar(nome1,hp1,nome2,hp2):
 # Implementação do loop principal
 
 while hp2 > 0 and hp1 > 0:
-  atacar(nome1,atk1,nome2,hp2)
-  hp2 = hp2 - atk1
+  hp2 = atacar(nome1,atk1,nome2,hp2)
   if hp2 < 0:
     exibir_placar(nome1,hp1,nome2,0)
   else:
     exibir_placar(nome1,hp1,nome2,hp2)
   
   if hp2 > 0 and hp1 > 0:
-    atacar(nome2,atk2,nome1,hp1)
-    hp1 = hp1 - atk2
+    hp1 = atacar(nome2,atk2,nome1,hp1)
     if hp1 < 0:
       exibir_placar(nome1,0,nome2,hp2)
     else:
