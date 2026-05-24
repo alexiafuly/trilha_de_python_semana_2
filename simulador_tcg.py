@@ -38,15 +38,24 @@ def exibir_placar(nome1,hp1,nome2,hp2):
 while hp2 > 0 and hp1 > 0:
   atacar(nome1,atk1,nome2,hp2)
   hp2 = hp2 - atk1
+  if hp2 < 0:
+    exibir_placar(nome1,hp1,nome2,0)
+  else:
+    exibir_placar(nome1,hp1,nome2,hp2)
+  
   if hp2 > 0 and hp1 > 0:
     atacar(nome2,atk2,nome1,hp1)
     hp1 = hp1 - atk2
+    if hp1 < 0:
+      exibir_placar(nome1,0,nome2,hp2)
+    else:
+      exibir_placar(nome1,hp1,nome2,hp2)
   else:
     break
 
+# Condição de vitória
+
 if hp1 <= 0:
-  exibir_placar(nome1,0,nome2,hp2)
   print(f"{nome2} venceu o duelo!")
 elif hp2 <= 0:
-  exibir_placar(nome1,hp1,nome2,0)
   print(f"{nome1} venceu o duelo!")
