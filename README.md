@@ -6,16 +6,20 @@ O programa simula um jogo de cartas por turnos, no qual dois monstros duelam ent
 
 ## Instruções para o usuário
 1) O usuário deve inserir todos os dados pedidos pelo programa: nomes, pontos de vida e pontos de ataque de cada monstro. É importante que todos os números inseridos sejam maiores que 0, caso contrário, o programa para de executar.
-2) Após a inserção dos dados, 
+2) Após a inserção dos dados, o duelo começa, com cada monstro atacando o outro em turnos. O placar é exibido após cada ataque.
+3) Quando o HP de um dos monstros chega a 0, a luta termina e o vencedor é anunciado.
 
 ## Respostas às perguntas teóricas
 
 1) Qual a principal diferença prática entre usar um laço for e um laço while em Python? Por que o while foi a melhor escolha para esse duelo?
-R: O laço for executa uma determinada ação um número definido de vezes, já o laço while executa uma ação enquanto uma condição for verdadeira. O laço while foi o mais adequado nesse caso porque a quantidade de turnos vai depender dos dados de entrada, portanto não há um número definido de repetições.
+
+R: O laço for executa uma determinada ação um número definido de vezes, já o laço while executa uma ação enquanto uma condição for verdadeira. Nesse caso, a quantidade de turnos vai depender dos dados de entrada, portanto não há um número definido de repetições. Sendo assim, o laço while é o mais adequado, com a condição de que o HP de ambos os monstros deve ser maior que 0.
 
 2) Para que serve a palavra chave return dentro de uma função? O que acontece se uma função fizer um cálculo matemático mas não possuir o return?
-R: 
+
+R: Serve para encerrar a execução de uma função e para devolver um valor que fica armazenado e pode ser utilizado em outras partes do código. Se uma função fizer um cálculo sem o return, nenhum valor será retornado ao executar a função, pois o resultado não ficou armazenado no programa.
 
 3) O que é um "loop infinito" e como podemos evitá-lo ao construir uma estrutura while?
-R: 
+
+R: É quando um código é executado infinitamente. Para que isso não aconteça, é preciso colocar uma condição de parada e garantir que ela seja cumprida.
 
